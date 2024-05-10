@@ -1,0 +1,35 @@
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution {
+  public:
+    long long int findNthTerm(int N) {
+        // code here
+        int res=3;
+        if(N==1) return 1;
+        else if(N==2) return 3;
+        for(int i=3;i<=N;i++)
+        {
+            res=res+i;
+        }
+        return res;
+    }
+};
+
+//{ Driver Code Starts.
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int N;
+        
+        cin>>N;
+
+        Solution ob;
+        cout << ob.findNthTerm(N) << endl;
+    }
+    return 0;
+}
+// } Driver Code Ends
